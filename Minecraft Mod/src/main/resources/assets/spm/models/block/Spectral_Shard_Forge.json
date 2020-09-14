@@ -1,9 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "spm:blocks/Spectral_Shard_Forge_Top",
-        "front": "spm:blocks/Spectral_Shard_Forge_side",
-        "side": "spm:blocks/Spectral_Shard_Forge_side",
-        "bottom": "spm:blocks/Spectral_Shard_Forge_Bottom"
-    }
-}

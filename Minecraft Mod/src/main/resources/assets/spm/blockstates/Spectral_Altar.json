@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "Spectral_Altar" },
-        "facing=south": { "model": "Spectral_Altar", "y": 180 },
-        "facing=west":  { "model": "Spectral_Altar", "y": 270 },
-        "facing=east":  { "model": "Spectral_Altar", "y": 90 }
-    }
-}

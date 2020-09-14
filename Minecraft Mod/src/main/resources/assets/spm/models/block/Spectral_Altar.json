@@ -1,8 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "spm:blocks/Spectral_Altar_Top",
-        "front": "spm:blocks/Spectral_Altar_Side",
-        "side": "spm:blocks/Spectral_Altar_Side"
-    }
-}
