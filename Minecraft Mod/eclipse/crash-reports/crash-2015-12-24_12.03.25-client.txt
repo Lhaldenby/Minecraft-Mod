@@ -1,0 +1,112 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 24/12/15 12:03
+Description: Updating screen events
+
+java.lang.IndexOutOfBoundsException: Index: 40, Size: 40
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at net.minecraft.inventory.Container.mergeItemStack(Container.java:577)
+	at com.ThreeFoolsStudios.SpectralMod.Gui.ForgeTileEntityContainer.transferStackInSlot(ForgeTileEntityContainer.java:65)
+	at net.minecraft.inventory.Container.slotClick(Container.java:260)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:492)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:641)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:390)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:544)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:516)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1662)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1021)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:345)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at net.minecraft.inventory.Container.mergeItemStack(Container.java:577)
+	at com.ThreeFoolsStudios.SpectralMod.Gui.ForgeTileEntityContainer.transferStackInSlot(ForgeTileEntityContainer.java:65)
+	at net.minecraft.inventory.Container.slotClick(Container.java:260)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:492)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:641)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:390)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:544)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:516)
+
+-- Affected screen --
+Details:
+	Screen name: com.ThreeFoolsStudios.SpectralMod.Gui.GuiForgeTileEntity
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player204'/548, l='MpServer', x=131.21, y=80.00, z=152.94]]
+	Chunk stats: MultiplayerChunkCache: 41, 41
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 147.00,64.00,207.00 - World: (147,64,207), Chunk: (at 3,4,15 in 9,12; contains blocks 144,0,192 to 159,255,207), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1043905 game time, 2663 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 18 total; [EntitySheep['Sheep'/137, l='MpServer', x=105.19, y=86.00, z=114.38], EntityCreeper['Creeper'/7561, l='MpServer', x=84.50, y=35.00, z=161.50], EntityZombie['Zombie'/7562, l='MpServer', x=90.50, y=35.00, z=163.50], EntityCow['Cow'/140, l='MpServer', x=97.50, y=71.00, z=165.50], EntityCow['Cow'/141, l='MpServer', x=97.50, y=71.00, z=165.50], EntitySheep['Sheep'/142, l='MpServer', x=97.09, y=68.00, z=190.94], EntitySheep['Sheep'/143, l='MpServer', x=98.88, y=68.00, z=192.03], EntitySheep['Sheep'/208, l='MpServer', x=146.25, y=75.00, z=182.81], EntityPig['Pig'/210, l='MpServer', x=158.53, y=67.00, z=192.59], EntitySheep['Sheep'/211, l='MpServer', x=148.34, y=66.00, z=198.53], EntityBat['Bat'/8467, l='MpServer', x=187.75, y=13.44, z=108.38], EntityPlayerSP['Player204'/548, l='MpServer', x=131.21, y=80.00, z=152.94], EntitySheep['Sheep'/173, l='MpServer', x=120.84, y=64.00, z=206.91], EntityBat['Bat'/7085, l='MpServer', x=131.46, y=48.99, z=188.81], EntitySheep['Sheep'/120, l='MpServer', x=88.28, y=75.00, z=190.34], EntitySheep['Sheep'/121, l='MpServer', x=93.31, y=71.00, z=176.44], EntitySkeleton['Skeleton'/5948, l='MpServer', x=86.88, y=71.00, z=186.69], EntityPig['Pig'/189, l='MpServer', x=133.75, y=66.00, z=112.34]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:350)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2488)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:367)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 727300064 bytes (693 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	FML: MCP v9.10 FML v8.0.20.1295 Minecraft Forge 11.14.0.1295 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{8.0.20.1295} [Forge Mod Loader] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{11.14.0.1295} [Minecraft Forge] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	spm{1.0} [Spectral Magic] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.8
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 980/PCIe/SSE2 GL version 4.5.0 NVIDIA 359.06, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)

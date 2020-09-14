@@ -1,0 +1,16 @@
+[
+{
+  "modid": "spm",
+  "name": "Spectral Magic",
+  "description": "Let the Spectral Magic of the world, choose your power.",
+  "version": "1.0",
+  "mcversion": "1.8",
+  "url": "http://www.ThreeFoolsStudios.com",
+  "updateUrl": "",
+  "authorList": ["Lewis Haldenby"],
+  "credits": "My final project for A Level Computer Science",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

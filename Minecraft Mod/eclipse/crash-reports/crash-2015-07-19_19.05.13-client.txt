@@ -1,0 +1,106 @@
+---- Minecraft Crash Report ----
+// Oh - I know what I did wrong!
+
+Time: 19/07/15 19:05
+Description: Rendering item
+
+java.lang.NullPointerException: Rendering item
+	at net.minecraft.item.ItemStack.getMetadata(ItemStack.java:235)
+	at net.minecraft.client.renderer.ItemModelMesher.getMetadata(ItemModelMesher.java:70)
+	at net.minecraft.client.renderer.ItemModelMesher.getItemModel(ItemModelMesher.java:43)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:359)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:410)
+	at net.minecraft.client.gui.achievement.GuiAchievement.updateAchievementWindow(GuiAchievement.java:137)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1071)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:345)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.item.ItemStack.getMetadata(ItemStack.java:235)
+	at net.minecraft.client.renderer.ItemModelMesher.getMetadata(ItemModelMesher.java:70)
+	at net.minecraft.client.renderer.ItemModelMesher.getItemModel(ItemModelMesher.java:43)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:359)
+
+-- Item being rendered --
+Details:
+	Item Type: null
+	Item Aux: ~~ERROR~~ NullPointerException: null
+	Item NBT: null
+	Item Foil: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:410)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player326'/287, l='MpServer', x=255.26, y=72.00, z=-252.71]]
+	Chunk stats: MultiplayerChunkCache: 169, 169
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 252.00,64.00,-224.00 - World: (252,64,-224), Chunk: (at 12,4,0 in 15,-14; contains blocks 240,0,-224 to 255,255,-209), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 197921 game time, 109844 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 62 total; [EntityRabbit['Rabbit'/128, l='MpServer', x=204.00, y=72.00, z=-183.56], EntityZombie['Zombie'/138, l='MpServer', x=213.56, y=54.00, z=-306.50], EntityRabbit['Rabbit'/139, l='MpServer', x=209.59, y=79.00, z=-302.91], EntityZombie['Zombie'/140, l='MpServer', x=223.34, y=17.00, z=-279.66], EntitySkeleton['Skeleton'/141, l='MpServer', x=217.06, y=28.00, z=-253.50], EntityChicken['Chicken'/142, l='MpServer', x=217.59, y=66.00, z=-203.63], EntityChicken['Chicken'/158, l='MpServer', x=249.59, y=67.00, z=-229.34], EntityArmorStand['Armor Stand'/159, l='MpServer', x=252.50, y=67.00, z=-229.50], EntityArmorStand['Armor Stand'/160, l='MpServer', x=252.50, y=67.00, z=-237.50], EntityZombie['Zombie'/288, l='MpServer', x=186.50, y=60.00, z=-277.50], EntityArmorStand['Armor Stand'/161, l='MpServer', x=252.50, y=67.00, z=-233.50], EntityZombie['Zombie'/289, l='MpServer', x=185.50, y=60.00, z=-276.50], EntitySkeleton['Skeleton'/291, l='MpServer', x=292.50, y=68.02, z=-192.50], EntityItem['item.item.egg'/169, l='MpServer', x=268.13, y=62.00, z=-295.31], EntityChicken['Chicken'/170, l='MpServer', x=268.59, y=62.66, z=-296.44], EntityItem['item.item.egg'/171, l='MpServer', x=256.03, y=67.00, z=-228.06], EntitySheep['Sheep'/172, l='MpServer', x=269.19, y=71.00, z=-191.47], EntitySheep['Sheep'/173, l='MpServer', x=260.47, y=64.00, z=-180.17], EntityChicken['Chicken'/179, l='MpServer', x=285.38, y=68.00, z=-232.47], EntityItem['item.item.egg'/180, l='MpServer', x=281.09, y=68.00, z=-231.50], EntitySpider['Spider'/181, l='MpServer', x=287.50, y=68.00, z=-233.50], EntityPlayerSP['Player326'/287, l='MpServer', x=255.26, y=72.00, z=-252.71], EntitySpider['Spider'/194, l='MpServer', x=297.50, y=71.00, z=-254.50], EntityChicken['Chicken'/195, l='MpServer', x=294.13, y=65.00, z=-209.50], EntityZombie['Zombie'/196, l='MpServer', x=292.50, y=67.00, z=-196.50], EntitySheep['Sheep'/197, l='MpServer', x=297.94, y=70.00, z=-179.91], EntitySheep['Sheep'/202, l='MpServer', x=310.66, y=68.00, z=-315.59], EntitySheep['Sheep'/203, l='MpServer', x=317.53, y=71.00, z=-289.38], EntityWitch['Witch'/204, l='MpServer', x=310.50, y=36.00, z=-183.50], EntitySkeleton['Skeleton'/205, l='MpServer', x=308.50, y=36.00, z=-183.50], EntityZombie['Zombie'/206, l='MpServer', x=306.50, y=34.00, z=-189.50], EntityPig['Pig'/211, l='MpServer', x=320.34, y=72.00, z=-325.16], EntitySheep['Sheep'/212, l='MpServer', x=322.41, y=79.00, z=-317.34], EntityPig['Pig'/213, l='MpServer', x=332.56, y=79.00, z=-289.94], EntityRabbit['Rabbit'/214, l='MpServer', x=321.16, y=71.00, z=-293.19], EntitySkeleton['Skeleton'/215, l='MpServer', x=326.50, y=74.00, z=-300.50], EntityCreeper['Creeper'/89, l='MpServer', x=179.50, y=36.00, z=-316.50], EntityBat['Bat'/90, l='MpServer', x=183.55, y=34.74, z=-312.69], EntityBat['Bat'/91, l='MpServer', x=181.58, y=42.36, z=-311.61], EntityBat['Bat'/92, l='MpServer', x=184.44, y=41.23, z=-309.39], EntityPig['Pig'/93, l='MpServer', x=186.88, y=66.00, z=-305.09], EntityCreeper['Creeper'/94, l='MpServer', x=189.44, y=36.00, z=-300.25], EntitySpider['Spider'/95, l='MpServer', x=190.50, y=65.00, z=-296.50], EntitySpider['Spider'/96, l='MpServer', x=186.50, y=65.00, z=-301.50], EntityCreeper['Creeper'/97, l='MpServer', x=188.03, y=24.00, z=-265.41], EntityPig['Pig'/98, l='MpServer', x=184.88, y=64.00, z=-269.66], EntityCreeper['Creeper'/99, l='MpServer', x=188.50, y=20.00, z=-255.50], EntityChicken['Chicken'/101, l='MpServer', x=187.41, y=69.00, z=-224.34], EntityBat['Bat'/102, l='MpServer', x=181.60, y=13.24, z=-209.15], EntityCreeper['Creeper'/103, l='MpServer', x=183.50, y=13.00, z=-215.50], EntityCreeper['Creeper'/104, l='MpServer', x=187.47, y=11.00, z=-218.66], EntityBat['Bat'/105, l='MpServer', x=178.50, y=14.43, z=-215.07], EntityCreeper['Creeper'/107, l='MpServer', x=184.66, y=41.00, z=-206.78], EntitySkeleton['Skeleton'/119, l='MpServer', x=200.50, y=38.00, z=-327.50], EntityPig['Pig'/120, l='MpServer', x=198.84, y=71.00, z=-292.88], EntityZombie['Zombie'/121, l='MpServer', x=196.44, y=67.46, z=-296.49], EntityRabbit['Rabbit'/122, l='MpServer', x=193.06, y=68.00, z=-302.50], EntityZombie['Zombie'/123, l='MpServer', x=206.50, y=49.00, z=-283.50], EntityRabbit['Rabbit'/124, l='MpServer', x=192.41, y=65.00, z=-260.94], EntityZombie['Zombie'/125, l='MpServer', x=197.25, y=43.00, z=-184.91], EntityZombie['Zombie'/126, l='MpServer', x=195.63, y=43.00, z=-190.50], EntityEnderman['Enderman'/127, l='MpServer', x=207.50, y=45.00, z=-184.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:350)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2488)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:367)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 617275416 bytes (588 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.10 FML v8.0.20.1295 Minecraft Forge 11.14.0.1295 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{8.0.20.1295} [Forge Mod Loader] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{11.14.0.1295} [Minecraft Forge] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	arm{1.0} [Arcane Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.8
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 980/PCIe/SSE2 GL version 4.5.0 NVIDIA 353.30, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)

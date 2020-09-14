@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 26/07/15 20:35
+Description: Rendering screen
+
+java.lang.NullPointerException: Rendering screen
+	at net.minecraft.client.gui.FontRenderer.sizeStringToWidth(FontRenderer.java:743)
+	at net.minecraft.client.gui.FontRenderer.wrapFormattedStringToWidth(FontRenderer.java:725)
+	at net.minecraft.client.gui.FontRenderer.listFormattedStringToWidth(FontRenderer.java:720)
+	at net.minecraft.client.gui.FontRenderer.renderSplitString(FontRenderer.java:689)
+	at net.minecraft.client.gui.FontRenderer.drawSplitString(FontRenderer.java:684)
+	at com.ThreeFoolsStudios.SpectralMod.GuiRefiner.drawScreen(GuiRefiner.java:97)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:448)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1078)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1048)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:345)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.gui.FontRenderer.sizeStringToWidth(FontRenderer.java:743)
+	at net.minecraft.client.gui.FontRenderer.wrapFormattedStringToWidth(FontRenderer.java:725)
+	at net.minecraft.client.gui.FontRenderer.listFormattedStringToWidth(FontRenderer.java:720)
+	at net.minecraft.client.gui.FontRenderer.renderSplitString(FontRenderer.java:689)
+	at net.minecraft.client.gui.FontRenderer.drawSplitString(FontRenderer.java:684)
+	at com.ThreeFoolsStudios.SpectralMod.GuiRefiner.drawScreen(GuiRefiner.java:97)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:448)
+
+-- Screen render details --
+Details:
+	Screen name: com.ThreeFoolsStudios.SpectralMod.GuiRefiner
+	Mouse location: Scaled: (250, 161). Absolute: (501, 156)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player528'/349, l='MpServer', x=-104.19, y=71.00, z=340.80]]
+	Chunk stats: MultiplayerChunkCache: 169, 169
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -68.00,67.00,291.00 - World: (-68,67,291), Chunk: (at 12,4,3 in -5,18; contains blocks -80,0,288 to -65,255,303), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 49069 game time, 23475 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 62 total; [EntitySkeleton['Skeleton'/130, l='MpServer', x=-142.47, y=69.00, z=268.09], EntitySquid['Squid'/131, l='MpServer', x=-127.19, y=61.78, z=285.53], EntitySquid['Squid'/132, l='MpServer', x=-131.09, y=58.00, z=280.88], EntitySpider['Spider'/133, l='MpServer', x=-140.29, y=72.00, z=344.66], EntitySkeleton['Skeleton'/134, l='MpServer', x=-140.93, y=72.00, z=356.53], EntityCow['Cow'/135, l='MpServer', x=-132.47, y=68.00, z=354.69], EntityCow['Cow'/136, l='MpServer', x=-135.56, y=70.00, z=365.25], EntityZombie['Zombie'/137, l='MpServer', x=-139.78, y=72.00, z=399.19], EntityCreeper['Creeper'/138, l='MpServer', x=-140.81, y=72.00, z=393.28], EntityCreeper['Creeper'/139, l='MpServer', x=-136.53, y=72.00, z=409.69], EntitySquid['Squid'/152, l='MpServer', x=-121.13, y=61.81, z=287.53], EntityBat['Bat'/153, l='MpServer', x=-115.11, y=41.29, z=308.84], EntityCreeper['Creeper'/154, l='MpServer', x=-112.38, y=63.00, z=309.50], EntityCow['Cow'/155, l='MpServer', x=-114.38, y=69.00, z=377.34], EntityCreeper['Creeper'/167, l='MpServer', x=-112.06, y=67.00, z=353.75], EntityCow['Cow'/173, l='MpServer', x=-93.47, y=69.00, z=265.63], EntitySmallFireball['Small Fireball'/175, l='MpServer', x=-94.00, y=70.78, z=303.41], EntitySmallFireball['Small Fireball'/176, l='MpServer', x=-93.25, y=75.22, z=309.56], EntitySquid['Squid'/177, l='MpServer', x=-81.54, y=62.27, z=321.72], EntityWolf['Wolf'/178, l='MpServer', x=-95.75, y=70.00, z=373.72], EntityItem['item.item.bone'/179, l='MpServer', x=-95.38, y=70.00, z=372.47], EntityCow['Cow'/185, l='MpServer', x=-66.03, y=67.00, z=264.91], EntityCow['Cow'/186, l='MpServer', x=-70.91, y=67.00, z=278.94], EntitySkeleton['Skeleton'/187, l='MpServer', x=-64.67, y=69.98, z=367.28], EntityCreeper['Creeper'/188, l='MpServer', x=-68.59, y=70.00, z=368.03], EntitySmallFireball['Small Fireball'/189, l='MpServer', x=-78.56, y=74.03, z=384.84], EntityCreeper['Creeper'/190, l='MpServer', x=-65.50, y=70.00, z=388.50], EntityCow['Cow'/67, l='MpServer', x=-176.47, y=71.00, z=391.53], EntityCow['Cow'/196, l='MpServer', x=-56.95, y=66.00, z=303.72], EntityZombie['Zombie'/197, l='MpServer', x=-62.50, y=64.00, z=329.09], EntityBat['Bat'/198, l='MpServer', x=-51.25, y=14.38, z=352.86], EntitySmallFireball['Small Fireball'/199, l='MpServer', x=-48.97, y=79.38, z=364.84], EntityCreeper['Creeper'/200, l='MpServer', x=-53.50, y=71.00, z=371.50], EntitySmallFireball['Small Fireball'/201, l='MpServer', x=-50.69, y=77.13, z=369.47], EntitySmallFireball['Small Fireball'/202, l='MpServer', x=-56.44, y=75.53, z=373.56], EntitySmallFireball['Small Fireball'/203, l='MpServer', x=-58.94, y=159.84, z=395.94], EntitySmallFireball['Small Fireball'/204, l='MpServer', x=-59.53, y=171.13, z=395.88], EntitySmallFireball['Small Fireball'/205, l='MpServer', x=-57.63, y=176.25, z=401.19], EntitySkeleton['Skeleton'/81, l='MpServer', x=-167.20, y=67.00, z=345.35], EntityCow['Cow'/82, l='MpServer', x=-160.09, y=72.00, z=393.44], EntityCow['Cow'/83, l='MpServer', x=-166.59, y=72.19, z=402.44], EntityCow['Cow'/212, l='MpServer', x=-35.56, y=66.00, z=294.69], EntityBat['Bat'/213, l='MpServer', x=-38.50, y=15.10, z=324.59], EntityBat['Bat'/214, l='MpServer', x=-31.38, y=15.05, z=324.32], EntityCow['Cow'/215, l='MpServer', x=-42.47, y=64.00, z=322.72], EntityCreeper['Creeper'/216, l='MpServer', x=-37.50, y=64.00, z=325.50], EntityCreeper['Creeper'/217, l='MpServer', x=-43.56, y=64.00, z=324.09], EntitySmallFireball['Small Fireball'/218, l='MpServer', x=-46.84, y=82.97, z=357.56], EntitySmallFireball['Small Fireball'/219, l='MpServer', x=-47.34, y=81.91, z=360.03], EntityCreeper['Creeper'/91, l='MpServer', x=-145.50, y=70.00, z=266.50], EntitySkeleton['Skeleton'/220, l='MpServer', x=-42.50, y=71.00, z=390.50], EntityBat['Bat'/92, l='MpServer', x=-150.09, y=21.90, z=279.49], EntityBat['Bat'/93, l='MpServer', x=-145.29, y=23.22, z=275.45], EntityPlayerSP['Player528'/349, l='MpServer', x=-104.19, y=71.00, z=340.80], EntityBat['Bat'/94, l='MpServer', x=-145.25, y=22.27, z=280.19], EntityCow['Cow'/95, l='MpServer', x=-154.28, y=70.00, z=366.31], EntityCreeper['Creeper'/96, l='MpServer', x=-153.80, y=73.00, z=386.44], EntitySkeleton['Skeleton'/97, l='MpServer', x=-152.50, y=72.00, z=407.16], EntityCow['Cow'/98, l='MpServer', x=-159.63, y=73.00, z=407.53], EntityCow['Cow'/99, l='MpServer', x=-147.28, y=72.00, z=408.56], EntityCow['Cow'/100, l='MpServer', x=-151.56, y=73.00, z=413.50], EntityCreeper['Creeper'/233, l='MpServer', x=-35.19, y=14.00, z=323.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:350)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2488)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:367)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 637261792 bytes (607 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.10 FML v8.0.20.1295 Minecraft Forge 11.14.0.1295 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{8.0.20.1295} [Forge Mod Loader] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{11.14.0.1295} [Minecraft Forge] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	spm{2.0} [Spectral Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.8
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 980/PCIe/SSE2 GL version 4.5.0 NVIDIA 353.30, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)

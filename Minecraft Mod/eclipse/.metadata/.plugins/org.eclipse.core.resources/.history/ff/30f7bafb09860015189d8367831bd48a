@@ -1,0 +1,174 @@
+package com.ThreeFoolsStudios.SpectralMod.Gui;
+
+import java.io.IOException;
+
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.util.ResourceLocation;
+
+import com.ThreeFoolsStudios.SpectralMod.Reference;
+import com.ThreeFoolsStudios.SpectralMod.SpectralPlayer.ExtendedSpectralPlayer;
+
+public class GuiSpectralAltar extends GuiScreen {
+	
+	private GuiButton a;
+	private GuiButton e;
+	private GuiButton n;
+	
+	private GuiButton Spell_1;
+	private GuiButton Spell_2;
+	private GuiButton Spell_3;
+	
+	private GuiButton Spell_1_Upgrade_1; 
+	private GuiButton Spell_1_Upgrade_2;
+	
+	private GuiButton Spell_2_Upgrade_1; 
+	private GuiButton Spell_2_Upgrade_2;
+	
+	private GuiButton Spell_3_Upgrade_1; 
+	private GuiButton Spell_3_Upgrade_2;
+	
+	private static final ResourceLocation texturepath = new ResourceLocation(Reference.MOD_ID+":textures/Gui/ClassSelection.png");
+	private static final ResourceLocation texturepath2 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/AltarBackground.png");
+	private static final ResourceLocation texturepath3 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/ArcaneSpellBackground.png");
+	private static final ResourceLocation texturepath4 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/ElementalSpellBackground.png");
+	private static final ResourceLocation texturepath5 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/NecromanticSpellBackground.png");
+	private static final ResourceLocation texturepath6 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/Spectral_Spell_Images.png");
+	private static final ResourceLocation texturepath7 = new ResourceLocation(Reference.MOD_ID+":textures/Gui/MasterSpells.png");
+	
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks){
+		ExtendedSpectralPlayer SpectralPlayer = ExtendedSpectralPlayer.get(mc.thePlayer);
+		
+		this.drawDefaultBackground();
+		
+		if (SpectralPlayer.GetActiveClass() == 0) {
+			
+			this.mc.getTextureManager().bindTexture(texturepath);
+			this.drawTexturedModalRect(this.width / 4, this.height / 8, 0, 0, 200, 175);
+			
+		} else {
+			
+			this.mc.getTextureManager().bindTexture(texturepath2);
+			this.drawTexturedModalRect(this.width / 4, this.height / 8, 0, 0, 223, 175);
+			
+			if (SpectralPlayer.GetActiveClass() == 1) {
+				
+				this.mc.getTextureManager().bindTexture(texturepath3);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 - 60, 0, 0, 60, 100);//backgrounds
+				this.drawTexturedModalRect(this.width / 4 + 75, this.height / 2 - 60, 60, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 135, this.height / 2 - 60, 120, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 +40, 0, 100, 180, 30);
+				
+				if (SpectralPlayer.GetNumberOfSpells() == 0){
+				this.mc.getTextureManager().bindTexture(texturepath6);
+				this.drawTexturedModalRect(this.width / 4 + 55, this.height / 2 - 60, 0, 0, 16, 16);//spell icons *9
+				this.drawTexturedModalRect(this.width / 4 + 91, this.height / 2 - 60, 16, 0, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 107, this.height / 2 - 60, 32, 0, 16, 16);
+				
+				this.drawTexturedModalRect(this.width / 4 + 55, this.height / 2 - 24, 0, 16, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 91, this.height / 2 - 24, 16, 16, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 107, this.height / 2 - 24, 32, 16, 16, 16);
+				
+				this.drawTexturedModalRect(this.width / 4 + 55, this.height / 2 - 8, 0, 32, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 91, this.height / 2 - 8, 16, 32, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 107, this.height / 2 - 8, 32, 32, 16, 16);
+				
+				this.mc.getTextureManager().bindTexture(texturepath7);
+				this.drawTexturedModalRect(this.width / 4 + 55, this.height / 2 + 12, 0, 0, 16, 16);//Master Spells
+				this.drawTexturedModalRect(this.width / 4 + 91, this.height / 2 + 12, 16, 0, 16, 16);
+				this.drawTexturedModalRect(this.width / 4 + 107, this.height / 2 + 12, 32, 0, 16, 16);
+				}
+				
+			} else if (SpectralPlayer.GetActiveClass() == 2) {
+				
+				this.mc.getTextureManager().bindTexture(texturepath4);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 - 60, 0, 0, 60, 100);//backgrounds
+				this.drawTexturedModalRect(this.width / 4 + 75, this.height / 2 - 60, 60, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 135, this.height / 2 - 60, 120, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 +40, 0, 100, 180, 30);
+				
+			} else if (SpectralPlayer.GetActiveClass() == 3) {
+				
+				this.mc.getTextureManager().bindTexture(texturepath5);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 - 60, 0, 0, 60, 100);//backgrounds
+				this.drawTexturedModalRect(this.width / 4 + 75, this.height / 2 - 60, 60, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 135, this.height / 2 - 60, 120, 0, 60, 100);
+				this.drawTexturedModalRect(this.width / 4 + 15, this.height / 2 +40, 0, 100, 180, 30);
+				
+			}
+		}
+		super.drawScreen(mouseX, mouseY, partialTicks);
+	}
+	
+	@Override
+	public boolean doesGuiPauseGame() {
+	    return false;
+	}
+	
+	@Override
+	public void initGui() {
+		
+		ExtendedSpectralPlayer SpectralPlayer = ExtendedSpectralPlayer.get(mc.thePlayer);
+        if (SpectralPlayer.GetActiveClass() == 0) {   
+        	
+	    this.buttonList.add(this.a = new GuiButton(0, this.width / 2 - 30, this.height / 2 - 55, 60, 20, "Arcane"));
+	    this.buttonList.add(this.e = new GuiButton(1, this.width / 2 - 80, this.height / 2 + 20, 60, 20, "Elemental"));
+	    this.buttonList.add(this.n = new GuiButton(2, this.width / 2 + 10, this.height / 2 + 20, 65, 20, "Necromantic"));
+	    
+        } else if (SpectralPlayer.GetActiveClass() == 1){
+        	
+        	this.buttonList.add(this.Spell_1 = new GuiButton(0, this.width / 4 + 15, this.height / 2 - 80, 60, 20, "Dig"));
+        	this.buttonList.add(this.Spell_2 = new GuiButton(0, this.width / 4 + 75, this.height / 2 - 80, 60, 20, ""));
+        	this.buttonList.add(this.Spell_3 = new GuiButton(0, this.width / 4 + 135, this.height / 2 - 80, 60, 20, ""));
+        	
+        	 if (SpectralPlayer.GetSpectralLevel() == 1){
+        	//this.buttonList.add(this.Spell_1_Upgrade_1 = new SpellButtons(0, this.width / 4 + 35, this.height / 4 + 12, 16, 16, ""));
+        	//this.drawTexturedModalRect(this.width / 4 + 35, this.height / 4 + 12, 0, 0, 16, 16);
+        	 }
+        	
+        } else if (SpectralPlayer.GetActiveClass() == 2){
+        	
+        	this.buttonList.add(this.Spell_1 = new GuiButton(0, this.width / 4 + 15, this.height / 2 - 80, 60, 20, "Fire"));
+        	this.buttonList.add(this.Spell_2 = new GuiButton(0, this.width / 4 + 75, this.height / 2 - 80, 60, 20, "Frost"));
+        	this.buttonList.add(this.Spell_3 = new GuiButton(0, this.width / 4 + 135, this.height / 2 - 80, 60, 20, "Storm"));
+        	
+        } else if (SpectralPlayer.GetActiveClass() == 3){
+        	
+        	this.buttonList.add(this.Spell_1 = new GuiButton(0, this.width / 4 + 15, this.height / 2 - 80, 60, 20, "Summon"));
+        	this.buttonList.add(this.Spell_2 = new GuiButton(0, this.width / 4 + 75, this.height / 2 - 80, 60, 20, "Shadow"));
+        	this.buttonList.add(this.Spell_3 = new GuiButton(0, this.width / 4 + 135, this.height / 2 - 80, 60, 20, "Warp"));
+        	
+        }
+   }
+	
+	@Override
+	protected void actionPerformed(GuiButton button) throws IOException {
+		
+		ExtendedSpectralPlayer SpectralPlayer = ExtendedSpectralPlayer.get(mc.thePlayer);
+        
+		if (button == this.a) {
+	        this.mc.displayGuiScreen(null);
+	        SpectralPlayer.UpdatePlayerClass(1);
+	        if (this.mc.currentScreen == null)
+	            this.mc.setIngameFocus();
+	    }
+		else if (button == this.e){
+	        this.mc.displayGuiScreen(null);
+	        SpectralPlayer.UpdatePlayerClass(2);
+	        if (this.mc.currentScreen == null)
+	            this.mc.setIngameFocus();
+	    }
+		else if (button == this.n){
+	        this.mc.displayGuiScreen(null);
+	        SpectralPlayer.UpdatePlayerClass(3);
+	        if (this.mc.currentScreen == null)
+	            this.mc.setIngameFocus();
+	    }
+		else if (button == this.Spell_1_Upgrade_1){
+			this.mc.displayGuiScreen(null);
+			if (this.mc.currentScreen == null)
+	            this.mc.setIngameFocus();
+		}
+	}
+}

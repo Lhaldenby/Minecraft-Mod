@@ -1,0 +1,74 @@
+item.Spectral_Tomb.name=Spectral Tomb
+item.Necromantic_Gem.name=Necromantic Gem
+item.Necromantic_Shard.name=Necromantic Shard
+item.Arcane_Gem.name=Arcane Gem
+item.Arcane_Shard.name=Arcane Shard
+item.Elemental_Shard.name=Elemental Shard
+item.Elemental_Gem.name=Elemental Gem
+item.Battle_Axe.name=Battle Axe
+item.Spectral_Battle_Axe.name=Spectral Battle Axe
+item.Staff.name=Staff
+item.Spectral_Sword.name=Spectral Sword
+item.Arcane_Staff.name=Arcane Staff
+item.Elemental_Staff.name=Elemental Staff
+item.Necromantic_Staff.name=Necromantic Staff
+item.Arcane_Helmet.name=Arcane Helmet
+item.Arcane_ChestPlate.name=Arcane Chestplate
+item.Arcane_Leggings.name=Arcane Leggings
+item.Arcane_Boots.name=Arcane Boots
+item.Elemental_Helmet.name=Elemental Helmet
+item.Elemental_ChestPlate.name=Elemental Chestplate
+item.Elemental_Leggings.name=Elemental Leggings
+item.Elemental_Boots.name=Elemental Boots
+item.Necromantic_Helmet.name=Necromantic Helmet
+item.Necromantic_ChestPlate.name=Necromantic Chestplate
+item.Necromantic_Leggings.name=Necromantic Leggings
+item.Necromantic_Boots.name=Necromantic Boots
+item.Necromantic_Parchment.name=Necromantic Parchment
+item.Elemental_Parchment.name=Elemental Parchment
+item.Arcane_Parchment.name=Arcane Parchment
+item.Spectral_Projectile.name=Spectral Projectile
+
+tile.Arcane_Ore.name=Arcane Ore
+tile.Necromantic_Crystal.name=Necromantic Crystal
+tile.Elemental_Stone.name=Elemental Stone
+tile.Spectral_Altar.name=Spectral Altar
+tile.Spectral_Stone.name=Spectral Stone
+tile.Spectral_Gem_Block.name=Spectral Gem Block
+tile.Spectral_Barrier.name=Spectral Barrier
+tile.Spectral_Shard_Forge.name=Spectral Forge
+tile.Spectral_Light.name=Spectral Light
+
+container.Spectral_Shard_Forge=Forge
+
+itemGroup.tabSpectral=Spectral Magic
+
+key.SpectralMagic.category=Spectral Magic keys
+
+key.SpellUp.desc=Spell Up
+key.SpellDown.desc=Spell Down
+
+achievement.StartSpectralMagic=Start Spectral Magic!
+achievement.StartSpectralMagic.desc=Read the Spectral Tomb
+achievement.CastFirstSpell=Cast the first of many spells!
+achievement.CastFirstSpell.desc=Cast your first spell
+achievement.FullSpell=Fully Upgrade a Spell
+achievement.FullSpell.desc=Get one of your spells to level 3
+achievement.AllSpells=Get every spell
+achievement.AllSpells.desc=Get all 4 spells
+achievement.MaxSpells=Fully upgrade every spell
+achievement.MaxSpells.desc=Get all spells to level 3 and choose a master spell
+achievement.GetShard=Obtain a class shard
+achievement.GetShard.desc=Smelt a spectral ore in a furnace
+achievement.MakeGem=Make a class gem using shards
+achievement.MakeGem.desc=Using 3 shards in a forge craft a gem
+achievement.MakeArmour=Craft a spectral armour peice
+achievement.MakeArmour.desc=Use the forge to improve diamond armour
+achievement.MakeStaff=Craft a spectral staff
+achievement.MakeStaff.desc=Craft a spectral staff using a gem and a staff
+achievement.ChooseClass=Choose your magic class
+achievement.ChooseClass.desc=Use the altar to choose your class
+achievement.LevelUp=Level up your magic skill
+achievement.LevelUp.desc=Cast enough spells to level up
+achievement.MaxLevel=Reach the maximum spectral level
+achievement.MaxLevel.desc=Cast enough spells to reach the maximum level

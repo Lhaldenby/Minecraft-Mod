@@ -1,0 +1,75 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 08/01/16 19:35
+Description: Ticking block entity
+
+java.lang.NullPointerException: Ticking block entity
+	at com.ThreeFoolsStudios.SpectralMod.TileEntity.ShardForgeTileEntity.update(ShardForgeTileEntity.java:240)
+	at net.minecraft.world.World.updateEntities(World.java:1720)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:571)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:598)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:164)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:478)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.ThreeFoolsStudios.SpectralMod.TileEntity.ShardForgeTileEntity.update(ShardForgeTileEntity.java:240)
+
+-- Block entity being ticked --
+Details:
+	Name: null // com.ThreeFoolsStudios.SpectralMod.TileEntity.ShardForgeTileEntity
+	Block type: ID #206 (tile.Spectral_Shard_Forge // com.ThreeFoolsStudios.SpectralMod.blocks.ForgeBlockTileEntity)
+	Block data value: 0 / 0x0 / 0b0000
+	Block location: World: (129,80,152), Chunk: (at 1,5,8 in 8,9; contains blocks 128,0,144 to 143,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Actual block type: ID #206 (tile.Spectral_Shard_Forge // com.ThreeFoolsStudios.SpectralMod.blocks.ForgeBlockTileEntity)
+	Actual block data value: 0 / 0x0 / 0b0000
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1720)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:571)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player49'/533, l='New World', x=131.80, y=80.00, z=152.77]]
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: 4787740698887500925
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: 147.00,64.00,207.00 - World: (147,64,207), Chunk: (at 3,4,15 in 9,12; contains blocks 144,0,192 to 159,255,207), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1260933 game time, 9863 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 5017 (now: false), thunder time: 9008 (now: true)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:598)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:164)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:478)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 743624496 bytes (709 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.10 FML v8.0.20.1295 Minecraft Forge 11.14.0.1295 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{8.0.20.1295} [Forge Mod Loader] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{11.14.0.1295} [Minecraft Forge] (forgeSrc-1.8-11.14.0.1295-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	spm{1.0} [Spectral Magic] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player49'/533, l='New World', x=131.80, y=80.00, z=152.77]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
